@@ -1,0 +1,462 @@
+Search what you want and a command or script will be given to you. Just ctrl f. Spaces are essential in commands 
+#### is just spacing from the explanation of a command to the actual command 
+###########################################################################################################################
+
+
+COMMANDS
+
+
+
+
+
+Determine the file type
+####
+file [name] 
+
+
+Estimate file space usage
+####
+du [option] [file_name]
+
+
+List of all of the directories you can move into.
+-l is used to see the permissions of the file that you can use 
+ls displays just the contents
+-a is to show all the files hidden and not hidden
+S* means all files names that begin with a S and * means any number of characters
+[] you put the characters you want inside the square brackets and it will search for files with [x1 or x2 or x3 etc etc
+? means it can be any single character so ?? can be any two letter combination. 
+* and ? are known as wildcards because they cover a wide scope of characters and letters. 
+[[:upper:]] has to begin with a upper case character
+[[:lower:]] has to begin with a lower case character
+####
+ls -l | ls | ls -a | ls S* | ls []* | ls *.file_extension_name | ls *.?? | ls [[:upper:]]*
+
+
+Go inside a directory where x is the name of the directory cd stands for change working directory
+cd ~ is the home directory
+####
+cd x | cd ~ 
+
+
+Clear the bash terminal of outputs
+####
+clear
+
+
+how to view the contents of a file in a coding terminal
+####
+code x
+
+
+I need help to get information about other commands where x is the name of the command
+Anything inside square brackets is optional and the pipeline means mutually exclusive = one or the other but not both
+####
+help x | x --help
+
+
+I need more help with my command where x is the name of the command
+Hit the h key to get help on navigating the manual without a mouse
+Press q to exit out of the help page
+For examples us /EXAMPLES  
+####                                
+man x 
+
+
+How to print the working directory (pretty much the path of your directory at the moment atm)
+####
+pwd
+
+
+Who am I logged in as
+####
+whoami
+
+
+
+How do I view the previous command that I used
+####
+Press the up arrow on your keyboard
+
+
+How to view the structure of the directories
+####
+tree
+
+
+how to cd from a subdirectory into its directory?
+####
+cd ..
+
+
+how to cd out of a subdirectory twice or whatever amount of times
+####
+cd ../../../..
+
+
+How to push directories onto a stack
+####
+pushd x1/x2
+
+
+How to view the push and pull stack
+####
+dirs -v
+
+
+how to pop out directories from the stack 
+####
+popd 
+
+
+how to locate a file and show the directory path to that path. x would be the name of the directory you are trying to find the path to
+whereis is used to locate binary, source files, and manual files
+####
+whereis x | whereis -b x
+
+
+
+which returns the pathnames of files that would be executed in the current environment and only returns back executables
+####
+which x
+
+
+returns all of the files in folder or directories and outputs them to the screen 
+if you dont want to care about case sensitivity then use -iname
+-type d to find directories and -type f to find files.
+####
+find -name "*.md" | find -iname "*.md" | find -type d | find -type f
+
+if you want to work with all working directories use and use it with a command.
+####
+.
+
+
+How to make a directory green means it is a directory.
+####
+mkdir x1 x2 x3 etc etc etc
+
+
+To make a sub directory make sure to use -p to create the parent directory each time
+####
+mkdir -p project01/sub1/sub2
+
+
+To make files in the directories use touch and here x is the name of the directory you want to put your file under and x1 is the name of the file you want to make
+with an extension which is variable y 
+####
+touch x/x1.y
+
+
+To move files to other directories use mv
+####
+mv directory_name/file_name other_directory 
+
+
+How to copy files and directories
+####
+cp directory_name/file_name other_directory/rename_optional
+
+
+
+how to remove a file from a directory. To remove recursively, add a -r tag. to remove a directory.
+####
+rm name_of_the_file | rm -r name_of_file | rmdir name_of_directory | 
+
+
+How to concat
+####
+cat first_file second_file
+
+
+how to take a few lines from a large chunk of text. regular head shows the first 10 lines
+-n flag is for the number of lines you want to show where x is the number of lines you want to show
+####
+head file_name | head -n x file_name
+
+
+the opposite of head is tail which gets the last lines of the file you want to open 
+where x is the number that you want to display
+####
+tail file_name | tail -n x file_name
+
+
+how to traverse large text files page by page
+####
+more file_name
+
+
+how to traverse through large text files by searching for keywords and scrolling through line by lines
+####
+less file_name
+
+
+how to grab specific items from a file
+####
+grep "pattern" file_name
+
+
+check all environment variables
+####
+env
+
+how to check a single environment variable
+####
+echo $name_of_variable | echo $SHELL | echo $HOME | echo $USER | echo $PATH
+
+
+how to create environment variables which only exists in the current bash environment
+####
+export new_Var=value
+
+
+how to make sure environment variables persist
+Should be in .bashrc 
+remember that ~ is the home directory
+####
+ls -a ~
+
+
+How to redirect the output of a command to lets say a txt file this overwrites a file
+####
+ls -l > file_name.txt 
+####
+And then concatenate 
+####
+cat output.txt
+
+
+
+What if I want to append to an existing file
+####
+ls -l >> file_name.txt
+
+
+What if I want to redirect an error to a file. This is saying in my working directory, search for dir then output the error to the error.txt with the > command
+2 is here because it is a file descriptor for standard error. if it is not included then it will not be the same stream. output and error
+are two different streams
+####
+ls -l ./dir 2> file_name.txt
+####
+and then concat to the existing file
+####
+cat file_name.txt
+
+
+How to redirect error and output to the same file where 1 is the stream for output.
+####
+ls -l ./dir > error.txt 2>&1 
+####
+Then concat to the existing file
+####
+cat error.txt
+####
+Finally repeat the same process with the >> which appends to a current file or a faster way is to use &> where & is where steam 1 and 2 are stored in
+####
+ls -l >> error.txt 2>&1 | ls -l &> output2.txt
+
+
+how to concat and redirect into a new file
+####
+cat file_one file_two > file_three
+
+
+how to pipeline commands to another command
+lets say we want to list all the directories in usr/bin 
+but also wanted to use another command in tandem.
+then use the pipeline operator | 
+####
+ls -l /usr/bin/ | grep echo
+#### 
+not just limited to one pipe you can do multiple
+this will make sure the files with echo are sorted
+ls -l /usr/bin/ | grep echo | sort
+
+
+What is -rw-rw-rw- 1 vscode root 444 Jan 9 17:02
+that is a file. Anything with a - is a file
+There is no x here but -rwx the x would stand for executable 
+1st rw is user perms 
+2nd rw is group perms
+3rd is other people outside user and group perms
+1 is harlinks
+vscode is the owner of the file that can read write execute and change perms
+root is a owner group 
+444 is the number of bytes 
+the date it was last modified
+
+
+what is drw
+drw is a directory where d stands for directory.
+
+
+
+how to change permissions of a user
+####
+sudo chown name file_name.txt
+
+
+how to change permissions of a group
+####
+sudo chown :name newFile.txt | chgrp name newFile.txt
+
+
+how to remove permission to a file 
+####
+chmod -r|w|x file_name.? 
+
+how to add permissions to a file 
+####
+chmod +r|w|x file_name.?
+
+
+how to execute a file NO SPACE between /file_name
+####
+./file_name
+
+
+What are the octal numbers for r w and x
+ owner      group    others
+ r  w  x    r  w  x   r  w  x 
+(4)(2)(1)  (4)(2)(1)  (4)(2)(1)
+
+you add these numbers together to set the permissions
+of a file
+####
+777 is all perms allowed for everyone
+664 is rw for owner group and only read for others.
+etc etc
+
+
+how to execute a script without a ./
+####
+mkdir -p /home/vscode/.local/bin
+cp file_name /home/vscode/.local/bin
+####
+Now call the file_name that you want to execute
+####
+file_name 
+
+
+IF THE COMMAND IS BEING BUGGY JUST USE CTRL C
+
+
+#################################################################################
+SCRIPT 
+
+
+AT THE TOP TO DEFINE A FILE AS A SCRIPT YOU MUST USE: #!/bin/bash which is called a shhbang
+
+
+Operators
+####
+-le = less than or equal 
+-ge = greater than or equal
+-g = greater than
+-l = less than
+-eq = equal to
+
+
+How to use a variable
+####
+command $variable
+
+
+how to output a command
+####
+variable_name=$(cmd) 
+
+
+how to prompt a user for input
+####
+read -p "Whatever you want to display to the user: " variable_name
+
+
+How to make a function in bash first make sure functions are at the top to declare first and then use your function in whatever you like
+$1 is the first parameter $2 second parameter $3 ... $x
+####
+function_name(){
+    ...
+}
+
+function_name value | $value
+
+
+Arrays in bash where each element is separated by a space
+####
+array=("loadbalancer" "virtualmachine" "storage")
+for i in "${services[@]}"
+do
+echo $i
+done
+
+
+CONDITIONS
+####
+# A script that will ask for a number and print out a message depending on the value. 
+
+read -p "Enter a value: " n
+case $n in
+    1|2) 
+        echo "One or Two";;
+    5) 
+        echo "Five";;
+    3) 
+        echo "Three";;
+    *.txt) 
+        echo "Ends in .txt";;
+    *) 
+        echo "Other";;
+esac
+
+
+#Is it even or odd if statement with else
+
+number=25
+
+if [ $((number % 2)) -eq 0 ];
+then
+   echo "The number $number is even!";
+else 
+   echo "The number $number is odd!"
+fi
+
+
+LOOPS
+####
+# A script to display a series of numbers using a while loop.
+
+counter=1
+while [[ "$counter" -le 10 ]]; do
+    echo "The counter is at: $counter"
+    counter=$((counter + 1))
+done
+echo "The count has finished."
+
+# A script that will recieve input and break depending on condition. 
+
+
+while true; do
+  read -p "Enter a number between 1 and 25: " n
+  if [[ $n -ge 1 && $n -le 25 ]]; then
+    echo "You entered $n"
+  else 
+    echo "You didn't enter a number in range, goodbye."
+    break
+  fi
+done
+
+echo "Break happened"
+
+
+counter=1
+until [[ "$counter" -gt 10 ]]; do
+    echo "The counter is at: $counter"
+    counter=$((counter + 1))
+done
+echo "The count has finished."
+
+
+for (( i=0; i<5; i=i+1 )); do
+    echo "The counter is at: $i"
+done

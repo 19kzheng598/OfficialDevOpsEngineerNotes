@@ -1,0 +1,9 @@
+find -name "-" 
+
+#./ before - to output a file with a -
+
+#-- before - to copy a file with a -
+
+cat ./-
+
+#password for bandit2: rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi

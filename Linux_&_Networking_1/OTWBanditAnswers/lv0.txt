@@ -1,0 +1,8 @@
+# $ ssh <username>@<remote> <-p>
+# -p would be the port number
+
+ssh bandit0@bandit.labs.overthewire.org -p2220
+
+#password prompt: 
+
+bandit0

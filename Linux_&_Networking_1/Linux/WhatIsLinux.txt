@@ -1,0 +1,24 @@
+Linux is a kernal.
+
+A kernal is a component of the OS that interacts with your hardware CPU Memory Devices and Applications.
+
+GNU = GNU's Not Unix free and open collection of software.
+
+Linux desktops are unique looking unlike Mac and Windows because you can customize it however you like in a modular way.
+Mix and match however you like. Common desktops are gmone kde cinnamon Xfce.
+You can also install multiple desktop environments if you want.
+
+version of linux are called distros such as ubuntu from debian which is a root distro.
+
+a package is a collection of files and applications in almost every distro and in every distro you will have a package manager
+
+very rarely a need to go to a website to download or update things
+
+all you need is nvidia driver. 
+
+you do not need an antivirus for linux because it is secure from the ground up.
+
+iso file is a image of a disk and can be loaded as a cd in your virtual machine to display whatever you need. 
+
+you can use rufus to load a iso onto your flashdrive.
+

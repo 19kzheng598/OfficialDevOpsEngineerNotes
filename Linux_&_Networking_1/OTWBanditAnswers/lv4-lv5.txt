@@ -1,0 +1,14 @@
+#Use reset if the terminal breaks
+
+ssh bandit4@bandit.labs.overthewire.org -p2220
+
+#Password prompt:
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+find -name "inhere" 
+
+cd inhere
+
+cat ./-file07
+
+#Password or bandit05: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR 

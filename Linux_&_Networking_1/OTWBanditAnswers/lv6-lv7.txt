@@ -1,0 +1,5 @@
+ssh bandit6@bandit.labs.overthewire.org -p2220
+
+#Password prompt:
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+

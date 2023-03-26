@@ -1,0 +1,141 @@
+ARE YOU FAMILIAR WITH THIS CONCEPTS?!?!?
+
+
+
+Commands:
+What is cd?
+cd is to navigate to directories
+
+
+What is ls?
+ls is the list the contents of a directory 
+
+
+What is mkdir, cp, rm, and touch?
+mkdir is to make a directory in the current directory
+cp is the copy a file in the current directory to some directory
+touch is to create a file
+
+
+What is locate, whereis, which, and find? 
+whereis is used to locate binary, source files, and manual files.
+locate ???
+which is used with executables to find the path 
+find specific files with certain attributes
+
+
+What is man and --help used for
+--help is used to get a brief summary on how to use a command
+man is used to get the full documentation of a command
+
+
+/var/log
+
+
+What does cat, less, more, tail, head do
+cat displays the file name or concats two files together
+less displays the file going up or down
+more displays the file only going down
+tail displays the end of the file with the specific amount of lines
+head displays the top of the file with the specific amount of lines
+
+
+What does grep and sed do
+grep stands for global regular expressions and filters out things you need in a file using regular expression patterns you define
+sed select, sub, add lines, delete, or modify/preserve files and text.
+
+
+What does > and tee do?
+> redirects std in, out, and, err to a text file
+tee ???
+
+
+| ?
+This is the pipeline operator which you can chain different commands together
+
+
+nano, vim, code? 
+nano is the manipulate files or create files
+vin ???
+code is to view the contents of a file.
+
+
+What does apt do?
+apt is for installing, updating, removing, and managing deb packages on ubuntu, debian, and related linux distributions. It combines the most frequent
+used commands from the apt-get and apt-cache tools with different default values of some options. apt is designed for interactive use. usually for
+sudo privs.
+
+
+What does chown chgrp chmod commands do? 
+chown changing or assign ownership to the file which has access to chmod
+chgrp changes the name of the group
+chmod with the three hex numbers can change the read write and exe of a file with 777 meaning anyone is able to access the file
+
+
+sudo?
+sudo creates new users. It stands for superuser do 
+
+
+What is ps, top, nice, kill?
+kill makes sure a loop or a faulty file will stop running given the process ID
+ps ???
+top ???
+nice ???
+
+
+
+Networking:
+OSI model
+
+
+IP addresses
+
+
+MAC Addresses
+
+
+TCP/IP
+
+
+TCP UDP
+
+
+DNS
+
+
+VPN tunneling
+
+
+TLS & SSL
+
+
+
+Bash Scripting:
+What is a shell?
+Through a shell such as a CLI such as cygwin
+I can send commands to the shell such as linux to talk to the hardware & software of your computer.
+
+
+What is Bash?
+Bash is a type of unix shell and command language used to send commands to the kernal. It is a superset of the bourne shell command. 
+Bash is now known as bourne again shell.
+It is highly used in Linux as it has multiple features to navigate through the OS and run all sorts of commands.
+
+
+Why does a bash script have to start with #! (shhhbang)
+shhbang is used to tell the kernel which interpreter should be used to run the cmds present in the file.
+
+
+What is a variable and how to use them
+A variable is used to store information which can then be manipulated to a specific need to get a desired output
+
+
+How to accept user input and output?
+#define the variable 
+$variable_name
+read -p "Whatever you want to display to the user: " variable_name
+echo $variable_name
+
+
+How to execute a script? 
+bash /path/to/script_name.sh

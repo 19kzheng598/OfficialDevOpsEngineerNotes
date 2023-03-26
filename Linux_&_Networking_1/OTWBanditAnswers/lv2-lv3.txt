@@ -1,0 +1,15 @@
+ssh bandit2@bandit.labs.overthewire.org -p2220
+
+#password prompt:
+
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+find -name "spaces in this filename"
+
+cat spaces\ in\ this\ filename
+
+#or
+
+cat "spaces in this filename"
+
+#Password for bandit3: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG

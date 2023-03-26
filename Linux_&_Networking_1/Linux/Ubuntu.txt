@@ -1,0 +1,73 @@
+Installing guest services to make full screen ubuntu on Virtual Machine and MORE!
+findmnt #This lists all the files in a tree like hierarchy
+
+sudo /media/user_name/VBox_GAs_7.0.6/VBoxLinuxAdditions.run #Runs the file for guest services
+
+sudo apt-get update #This updates the system to run these guest services
+
+sudo apt-get install build-essential gcc make perl dkms #This installs the perl visual settings
+
+#since perl package is installed, now we can actually run the LinuxAdditions
+sudo /media/user_name/VBox_GAs_7.0.6/VBoxLinuxAdditions.run #Runs the file for guest services
+
+#finally reboot to update all settings
+reboot
+
+#################################################################
+
+Bash Script auto update
+#!/bin/bash
+#Simple script ot update Ubuntu.
+
+sudo apt update -yy #-yy is for auto approve. Gets rid of [y/n] prompt
+sudo apt dist-upgrade -yy
+
+exit
+
+#################################################################
+
+Printing out directories path 
+echo $PATH
+
+#################################################################
+
+How to add a new bin to let us say a home directory to exe scripts?
+#Now why would we want to do this instead of calling the program from
+#lets say a home directory? because if the program can exe anywhere
+#then it leaves room for malicious intents such as virus programs
+#to execute. This is why ./ is used every time to go into a directory
+#where only admins can execute programs.
+#The extra slash at the end of bin means not replacing it as a different name
+mv program_name ~/bin/ 
+
+#################################################################
+
+How do we make sure that scripts execute all the time no matter
+what linux distribution you are using?
+#First use the which command. It is a command where it finds 
+#the path to executable. Keep in mind this only finds executables
+which x 
+
+#################################################################
+
+What if I want to write a script where all users can use? 
+#Go into this directory 
+cd /usr/local/bin 
+#Any script that we put in this directory and compile from source 
+#not managed by the package manager goes in here
+#Anyone can use this
+
+#################################################################
+
+Why are my variables not working?
+#Remember to put no spaces when declaring variables. For example,
+FOO=EzeeLinux
+#This variable will be in memory until the shell is closed
+#To output variable 
+echo $FOO
+
+#################################################################
+
+How to get the date
+TIME="$(date)"
+echo $TIME

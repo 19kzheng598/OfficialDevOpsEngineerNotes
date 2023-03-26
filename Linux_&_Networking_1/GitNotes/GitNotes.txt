@@ -1,0 +1,12 @@
+Ctrl F to search for help
+
+
+Q: What if I want to get rid of commits on a sync?
+S: git reset --hard origin/master
+
+Q: Another git process still seems to be running(windows usr) 
+S: del -f .git/index.lock
+
+Q: I need to initialize a new git repository on vscode source control
+S: Click on git source control icon and on the top click source control repository and close the current one,
+then on the bottom press publish to github and click on the new repo that you want to post.

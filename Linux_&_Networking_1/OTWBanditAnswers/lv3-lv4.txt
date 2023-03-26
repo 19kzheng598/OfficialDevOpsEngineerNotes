@@ -1,0 +1,13 @@
+ssh bandit3@bandit.labs.overthewire.org -p2220
+
+#Password prompt:
+
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+#use ls -a to list hidden files
+
+ls -a
+
+cat .hidden
+
+Password for bandit4: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe

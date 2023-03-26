@@ -1,0 +1,12 @@
+find -name "readme" 
+cat readme
+
+# The password for bandit1: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+exit
+
+ssh bandit1@bandit.labs.overthewire.org -p2220
+
+#password prompt:
+
+NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL

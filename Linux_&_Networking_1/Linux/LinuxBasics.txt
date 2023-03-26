@@ -1,0 +1,163 @@
+Q: can you combine multiple tags together and commands
+S: yes you can combine multiple tags as long as there is a space between each tag and yes you can combine commands by using the pipeline operator
+the [command1] | [command2] command1 outputs first then command2 outputs next
+
+Q:What is a CLI?
+S:A text-based program that performs actions via commands and interacts with the kernel
+which the kernel interacts with the hardware to perform tasks on the computer.
+
+Q:What is a shell?
+S:A shell is a program that runs commands from CLIs or built-in and outputs results. It is one of the most
+important parts of a Unix system. There are many different Unix shells but all derive features from the Bourne shell aka
+/bin/shell
+
+Q:What is a terminal?
+S:A GUI program used to run a shell such as windows terminal iTerm2 or Guake
+
+Q:What is a shell script?
+S:A text file that contains a sequence of shell commands.
+
+Q:What is bash?
+S:Linux uses an enhanced version of the Bourne Shell called Bash. Bash stands for Bourne Again Shell and it's become the Defacto standard
+for managing Linux machines
+
+Q:Syntax of Bash commands?
+S:command [options] [arguments]
+
+Q:How to get help on commands?
+S:
+man [command]
+or [command] --help
+
+Q:Wildcards(metacharacters)?
+S: Symbols that represent one or more characters in bash commands such as,
+
+- represents zero or a sequence of characters
+  ? represents a single character
+  [] denotes a group of characters
+
+Q:Commands to explore for the basics
+S:
+ls lists the contents of the current directory or specified directory
+
+ls -a include hidden files and directories
+
+ls -l include more information about each file
+
+pwd print the path to your current working directory
+
+cat concatenate files to standard output. fancy way of saying display the contents of a file to the screen
+
+man get the documentation on a command
+
+cd stands for change directory, get help with man builtins.
+
+cd .. move out of a current directory
+
+cd ~ go to the home directory
+
+mkdir create a directory
+
+mkdir -p to make a subdirectory or multiple sub directories
+
+rmdir delete an empty directory
+
+rm delete a file
+
+rm -i pops a prompt to confirm deletion
+
+rm -r
+
+rm \ delete all files (ignore the slash my prettier plugin on vscode is being stupid and I don't have time to fix it)
+
+cp copy files and directories
+
+ps get a snapshot of all currently running processes
+
+sudo some commands can only be run by the root user (aka superuser) you don't want to login as the root user because
+You have no record of system-altering commands or who is performing them and you don't have access to your normal shell
+environment.
+
+Q: Redirection?
+S: I/O redirection allows us to redirect input and output of commands to and from files, as well as connect multiple commands together into pipelines.
+< for redirecting input to a source other than the keyboard
+
+> for redirecting output to destination other than the screen and overwrites whatever is in the file
+
+> > for doing the same, but appending rather than overwriting
+
+| for piping output from one command to the input of another
+
+Q:Redirecting standard error or stderr 2 is standard error where 1 is the output stream.
+S:ls -l /bin/usr 2> file_name.txt
+
+Q:Redirecting standard output and standard error to one file in newer versions of bash you can use just &
+S: ls -l /bin/usr > ls-output.txt 2>&1
+or
+ls -l /bin/usr &> ls-output.txt
+
+Q:Redirecting standard input. Essentially this takes a file's content and then uses that file as standard in instead of you typing out stuff
+S:cat < file_name.txt
+
+Q:To chain commands use pipelines.
+S:ls -l /usr/bin | less
+or
+ps -ef | grep daemon
+or
+cat file.xtxt | fmt | pr | lpr
+
+Q:Terminating a misbehaving process.
+S:
+
+1.  #create the program with vi:
+
+    vi bad.py
+
+#insert the following which is a python code that lasts forever:
+
+i = 0
+while i == 0:
+pass
+
+2.  #Start the program put this in the command:
+
+bash python3 bad.py &
+
+#The & tells bash to run the command in the background and not wait for it to finish
+
+3.  #let's list all the process that contain "python":
+
+ps -ef | grep python
+
+#ps lists the running processes in the background
+-e shows all the processes
+-f lists in full format listing
+-ef is the combined of the two above
+
+4. #Final step to end the program:
+
+#This lists all the commands for kill
+
+kill -l
+
+5. #We have to decide which signal we are going to send kill the default is TERM allows the process to safely shut down.
+
+ps #to view the IDs of the current directory
+kill -9 PROCESS_ID
+
+Q:Use bash and grep(global regular expression print) to filter CLI output. Let's use Linux's universal pattern-matching program grep to filter Azure CLI output
+S: s2 -o table | awk '{print 3}' | grep 'DS.\*\_v2'
+
+Q:More about grep
+S:-i for case-insensitive matches
+-v inverts the search and prints lines that don't match
+
+#regular expressions are an entire topic but the three important things to remember are
+
+.\* matches any number of characters including none.
+
+.+ matches any one or more characters.
+
+. matches exactly one arbitrary character
+
+

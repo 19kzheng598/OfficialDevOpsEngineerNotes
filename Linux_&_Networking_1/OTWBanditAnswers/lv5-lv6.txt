@@ -1,0 +1,14 @@
+ssh bandit5@bandit.labs.overthewire.org -p2220
+
+Password prompt: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+cd inhere
+
+find -size 1033c ! -executable
+
+cd maybehere07
+
+cat ./-file2
+
+#Password for bandit6:
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
