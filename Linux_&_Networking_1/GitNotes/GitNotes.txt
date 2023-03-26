@@ -10,3 +10,6 @@ S: del -f .git/index.lock
 Q: I need to initialize a new git repository on vscode source control
 S: Click on git source control icon and on the top click source control repository and close the current one,
 then on the bottom press publish to github and click on the new repo that you want to post.
+
+Q: What if my current repository is giving me issues?
+S: Clone a new repository on your local computer and then commit the new copy.
