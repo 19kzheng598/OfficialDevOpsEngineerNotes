@@ -13,3 +13,11 @@ then on the bottom press publish to github and click on the new repo that you wa
 
 Q: What if my current repository is giving me issues?
 S: Clone a new repository on your local computer and then commit the new copy.
+
+Q: How to commit to the master branch
+S: git add . 
+git commit -am "update"
+git push origin master
+
+Q:
+S:
