@@ -10,6 +10,7 @@ Use print() function."""
 # output "Python is fun"
 print("Python is fun")
 
+
 """Simple Operations
 
 
