@@ -47,4 +47,3 @@ Let's see how exponentiation can be useful to perform the calculation.
 For example, if we want to calculate how much money we will have on the 5th day, we can use this expression: 0.01*(2**5) = 0.32 dollars (multiply the penny by 2 raised to the power of 5)."""
 # your code goes here
 print(.01*(2**30))
-###
