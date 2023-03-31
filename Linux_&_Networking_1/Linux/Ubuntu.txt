@@ -71,3 +71,17 @@ echo $FOO
 How to get the date
 TIME="$(date)"
 echo $TIME
+
+#################################################################
+
+Why are my if statements are not working?
+#Remember to put spaces at the start and end inside the square
+#brackets and after the ; then. For example:
+if [ "$1" == "--clean" ]; then
+    update
+    clean
+    leave
+fi
+
+#################################################################
+
