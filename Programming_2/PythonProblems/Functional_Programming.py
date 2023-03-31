@@ -92,6 +92,13 @@ print(x)
 
 """Sets
 
+The union operator | combines two sets to form a new one containing items in either.
+The intersection operator & gets items only in both.
+The difference operator - gets items in the first set but not in the second.
+The symmetric difference operator ^ gets items in either set, but not both.
+x.add() adds an item to the set
+x.remove() removes a item from the set
+x.pop() removes a arbitrary element
 
 Sets are created using curly braces and they hold unique values.
 
