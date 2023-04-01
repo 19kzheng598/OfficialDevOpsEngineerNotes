@@ -117,5 +117,4 @@ def conv(c):
     return c * (9/5) + 32
 
 
-fahrenheit = conv(celsius)
-print(fahrenheit)
+print(conv(celsius))

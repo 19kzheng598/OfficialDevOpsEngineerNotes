@@ -10,6 +10,7 @@ Sample Input
 
 Sample Output
 27"""
+from itertools import permutations
 x = int(input())
 print((lambda z: z**3)(x))
 
@@ -113,3 +114,72 @@ set2 = {4, 6, 7, 8, 11, 42, 2}
 
 # your code goes here
 print(set1 & set2)
+
+
+"""
+takewhile - takes items from an iterable while a predicate function remains true;
+chain - combines several iterables into one long one;
+accumulate - returns a running total of values in an iterable.
+The function count counts up infinitely from a value.
+The function cycle infinitely iterates through an iterable (for instance a list or string).
+The function repeat repeats an object, either infinitely or a specific number of times.
+There are also several combinatoric functions in itertool, such as product and permutation.
+REMEMBER, always type cast to a list at the end.
+
+itertools
+
+
+You are given a list of items, and need to find all the possible orders of the items.
+The output should be a list, containing all possible orders.
+
+Sample Input
+['a', 'b']
+
+Sample Output
+[('a', 'b'), ('b', 'a')]
+"""
+
+items = ['x', 'y']
+
+# your code goes here
+print(list(permutations(items)))
+
+
+"""Fibonacci
+
+
+The Fibonacci sequence is one of the most famous formulas in mathematics.
+Each number in the sequence is the sum of the two numbers that precede it.
+For example, here is the Fibonacci sequence for 10 numbers, starting from 0: 0,1,1,2,3,5,8,13,21,34.
+
+Write a program to take N (variable num in code template) positive numbers as input, and recursively calculate and output the first N numbers of the Fibonacci sequence (starting from 0).
+
+Sample Input
+6
+
+Sample Output
+0
+1
+1
+2
+3
+5"""
+num = int(input())
+
+
+def fibonacci(n):
+    # complete the recursive function
+    # append adds to the end of a list
+    nth_list = [0, 1]
+    i = 0
+    while n > 2:
+        n -= 1
+        nth_list.append(nth_list[i] + nth_list[i+1])
+        i += 1
+    return nth_list
+
+
+fibonacci_list = fibonacci(num)
+
+for i in fibonacci_list:
+    print(i)
